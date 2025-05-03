@@ -1,11 +1,20 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>My .dev Site</title>
-  </head>
-  <body>
-    <h1>Hello from my .dev domain!</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Writeups</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Writeups</h1>
+  <select id="fileSelector">
+    <option value="example1.md">Example 1</option>
+    <option value="example2.md">Example 2</option>
+  </select>
+  <div id="content">Loading...</div>
+
+  <script src="script.js"></script>
+</body>
 </html>
