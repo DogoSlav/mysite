@@ -9,11 +9,15 @@
 </head>
 <body>
   <h1>My Writeups</h1>
-  <select id="fileSelector">
-    <option value="example1.md">Example 1</option>
-    <option value="example2.md">Example 2</option>
-  </select>
-  <div id="content">Loading...</div>
+
+  <div id="main">
+    <ul id="fileList">
+      <li data-file="example1.md">📝 Example 1</li>
+      <li data-file="example2.md">📝 Example 2</li>
+    </ul>
+
+    <div id="content">Click a writeup to view it.</div>
+  </div>
 
   <script src="script.js"></script>
 </body>
