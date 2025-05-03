@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
     margin: 0;
     padding: 1rem;
     max-width: 100%;
@@ -8,6 +9,7 @@ body {
   
   h1 {
     text-align: center;
+    color: #ffffff; /* White heading */
   }
   
   #main {
@@ -22,20 +24,21 @@ body {
     padding: 0;
     margin: 0;
     width: 200px;
-    background: #ffffff;
+    background: #1f1f1f; /* Dark sidebar */
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
   }
   
   #fileList li {
     padding: 0.75rem 1rem;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #333;
     transition: background 0.2s;
+    color: #e0e0e0; /* Light text color */
   }
   
   #fileList li:hover {
-    background: #e0f0ff;
+    background: #3a3a3a; /* Hover effect with darker shade */
   }
   
   #fileList li.active {
@@ -47,10 +50,20 @@ body {
   /* Markdown content area */
   #content {
     flex-grow: 1;
-    background: white;
+    background: #1f1f1f; /* Dark content area */
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
     max-width: 100%;
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  a {
+    color: #0099cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
   
