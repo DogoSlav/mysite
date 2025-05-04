@@ -1,20 +1,29 @@
 const contentDiv = document.getElementById('content');
-const selector = document.getElementById('fileSelector');
+const fileList = document.getElementById('fileList');
 
 async function loadMarkdown(file) {
   try {
     const response = await fetch(`writeups/${file}`);
+    if (!response.ok) throw new Error("File not found");
     const text = await response.text();
     contentDiv.innerHTML = marked.parse(text);
   } catch (error) {
-    contentDiv.innerHTML = 'Error loading markdown file.';
+    contentDiv.innerHTML = '❌ Error loading markdown file.';
     console.error(error);
   }
 }
 
-selector.addEventListener('change', () => {
-  loadMarkdown(selector.value);
-});
+fileList.addEventListener('click', (e) => {
+  if (e.target && e.target.matches("li[data-file]")) {
+    const file = e.target.getAttribute('data-file');
 
-// Load initial file
-loadMarkdown(selector.value);
+    // Remove 'active' class from all list items
+    document.querySelectorAll('#fileList li').forEach(li => li.classList.remove('active'));
+
+    // Add 'active' to the clicked one
+    e.target.classList.add('active');
+
+    // Load the content
+    loadMarkdown(file);
+  }
+});
